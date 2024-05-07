@@ -7,16 +7,16 @@ namespace MediatrWithPublish.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class OrderController: ControllerBase
+public class OrderController : ControllerBase
 {
 
     private readonly IMediator _mediator;
-    
+
     public OrderController(IMediator mediator)
     {
         _mediator = mediator;
     }
-    
+
     [HttpPost]
     public async Task<Order> Create([FromBody] CreateOrderCommand command)
     {

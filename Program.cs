@@ -8,7 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // register MediatR with dependency injection 
-builder.Services.AddMediatR(cfg => 
+builder.Services.AddMediatR(cfg =>
         cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 var app = builder.Build();
